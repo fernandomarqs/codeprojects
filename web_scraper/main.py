@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 
 def get_information(response):
     # function that gets the contents from the desired URL. returns the title and body of its content as strings
+
+    #status_code = 200 is success; if its anything different, we had an error trying to read the page
     if response.status_code == 200:
         parser = BeautifulSoup(response.content, 'html.parser')
 
